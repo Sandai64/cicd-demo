@@ -18,7 +18,6 @@ jobs:
           base_href: /my-app/
           deploy_branch: gh-pages
           angular_dist_build_folder: dist/my-app/browser
-          angular_project_dir: ../
 
 permissions:
   contents: write
