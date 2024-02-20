@@ -1,27 +1,18 @@
 # MyApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+Listed below are the steps you'll need to take to build this app using Docker.
 
-## Development server
+Each command should be ruun under the project's root folder.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Building image
 
-## Code scaffolding
+`docker build -t my-app .`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Running the app
 
-## Build
+`docker run -p 8080:80 my-app`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Deployed app
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Head over to [cicd-demo](https://sandai64.github.io/cicd-demo/)
+The app is built from the `gh-pages` branch upon tag creation.
