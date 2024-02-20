@@ -5,21 +5,20 @@ on:
       - '**'
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: Angular Deploy gh-pages Actions
-    - uses: actions/checkout@v2
-    
-    - uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
-      with:
-        github_access_token: ${{ secrets.GITHUB_TOKEN }}
-        build_configuration: dev
-        base_href: /my-app/
-        deploy_branch: gh-pages
-        angular_dist_build_folder: dist/my-app/browser
-        angular_project_dir: ../
+      - uses: actions/checkout@v2
+      
+      - name: Deploy
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          build_configuration: dev
+          base_href: /my-app/
+          deploy_branch: gh-pages
+          angular_dist_build_folder: dist/my-app/browser
+          angular_project_dir: ../
 
 permissions:
   contents: write
