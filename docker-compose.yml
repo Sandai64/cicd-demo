@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  my-app:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    healthcheck:
+      test: ["CMD", "service", "nginx", "status"]
+      timeout: 10s
